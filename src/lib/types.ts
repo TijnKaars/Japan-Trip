@@ -4,6 +4,7 @@ export interface Reis {
   eindDatum: string
   reizigers: number
   valuta: string
+  reizigersnamen: string[]
 }
 
 export interface Hotel {
@@ -32,7 +33,7 @@ export interface Activiteit {
   eindTijd: string
   locatie: string
   kosten: number
-  status: 'idee' | 'gepland' | 'geboekt'
+  status: 'idee' | 'gepland'
   notities: string
 }
 
@@ -51,7 +52,8 @@ export interface DagPlan {
   datum: string
   dagNummer: number
   stad: string
-  status: 'idee' | 'gepland' | 'geboekt' | 'afgerond'
+  status: 'idee' | 'gepland' | 'afgerond'
+  reisdag?: boolean
   activiteiten: Activiteit[]
   transport: Transport[]
   notities: string
@@ -71,13 +73,6 @@ export interface LinkItem {
   label: string
   url: string
   type: 'boeking' | 'kaart' | 'info' | 'overig'
-}
-
-export interface Taak {
-  id: string
-  titel: string
-  status: 'open' | 'afgerond'
-  vervaldatum: string
 }
 
 export interface Notitie {

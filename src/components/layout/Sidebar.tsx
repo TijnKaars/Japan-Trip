@@ -6,7 +6,6 @@ import {
   LayoutDashboard,
   CalendarDays,
   MapPin,
-  Train,
   Wallet,
   FileText,
 } from 'lucide-react'
@@ -14,8 +13,7 @@ import {
 const navigatie = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/reisschema', label: 'Reisschema', icon: CalendarDays },
-  { href: '/steden', label: 'Steden', icon: MapPin },
-  { href: '/logistiek', label: 'Logistiek', icon: Train },
+  { href: '/steden', label: 'Steden & Hotels', icon: MapPin },
   { href: '/budget', label: 'Budget', icon: Wallet },
   { href: '/documenten', label: 'Documenten', icon: FileText },
 ]

@@ -6,4 +6,5 @@ export const reis: Reis = {
   eindDatum: '2026-09-14',
   reizigers: 3,
   valuta: 'EUR',
+  reizigersnamen: ['Tijn', 'Yme', 'Faisal'],
 }
