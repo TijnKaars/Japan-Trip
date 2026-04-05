@@ -23,13 +23,38 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25;
+  }
+}
+
+@layer utilities {
+  .status-gepland {
+    @apply bg-blue-50 text-blue-700 border border-blue-200;
+  }
+  .status-idee {
+    @apply bg-slate-100 text-slate-500 border border-slate-200;
+  }
+  .status-geboekt {
+    @apply bg-green-50 text-green-700 border border-green-200;
+  }
+  .status-afgerond {
+    @apply bg-slate-100 text-slate-400 border border-slate-200 line-through;
+  }
+  .reisdag-label {
+    @apply bg-amber-50 text-amber-700 border border-amber-200;
   }
 }

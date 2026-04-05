@@ -22,22 +22,22 @@ export function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="hidden md:flex flex-col w-56 min-h-screen bg-white border-r border-gray-100 px-3 py-6 shrink-0">
-      <div className="mb-8 px-2">
-        <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Japan 2026</div>
-        <div className="text-sm text-gray-600 mt-0.5">Osaka · Kyoto · Tokyo</div>
+    <aside className="hidden md:flex flex-col w-56 min-h-screen bg-white border-r border-slate-200 px-3 py-6 shrink-0">
+      <div className="mb-8 px-3">
+        <div className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-0.5">Japan 2026</div>
+        <div className="text-sm text-slate-500">Osaka · Kyoto · Tokyo</div>
       </div>
-      <nav className="flex flex-col gap-1">
+      <nav className="flex flex-col gap-0.5">
         {navigatie.map(({ href, label, icon: Icon }) => {
           const actief = pathname === href || pathname.startsWith(href + '/')
           return (
             <Link
               key={href}
               href={href}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors ${
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors duration-150 cursor-pointer ${
                 actief
-                  ? 'bg-gray-900 text-white font-medium'
-                  : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                  ? 'bg-slate-900 text-white font-medium'
+                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
               <Icon className="w-4 h-4 shrink-0" />
