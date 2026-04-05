@@ -24,6 +24,14 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.75rem;
+
+    /* Japan kleurpalet */
+    --jp-red: #C8102E;
+    --jp-bg: #FAFAFA;
+    --jp-card: #F0F0F0;
+    --jp-text: #1A1A1A;
+    --jp-muted: #6B6B6B;
+    --jp-border: #E0E0E0;
   }
 
   * {
@@ -31,30 +39,64 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 antialiased;
+    background-color: #FAFAFA;
+    color: #1A1A1A;
     font-size: 16px;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1.25;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1A1A1A;
   }
 }
 
 @layer utilities {
+  /* Statusbadges — consistent door de hele website */
   .status-gepland {
-    @apply bg-blue-50 text-blue-700 border border-blue-200;
+    background-color: #E8F0FE;
+    color: #1A56DB;
+    border: 1px solid #C3D5FD;
   }
   .status-idee {
-    @apply bg-slate-100 text-slate-500 border border-slate-200;
+    background-color: #E0E0E0;
+    color: #6B6B6B;
+    border: 1px solid #E0E0E0;
   }
   .status-geboekt {
-    @apply bg-green-50 text-green-700 border border-green-200;
+    background-color: #C8102E;
+    color: #FFFFFF;
+    border: 1px solid #C8102E;
   }
   .status-afgerond {
-    @apply bg-slate-100 text-slate-400 border border-slate-200 line-through;
+    background-color: transparent;
+    color: #6B6B6B;
+    border: 1px solid #E0E0E0;
+    text-decoration: line-through;
   }
   .reisdag-label {
-    @apply bg-amber-50 text-amber-700 border border-amber-200;
+    background-color: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+  }
+
+  /* Japan kaartstijl */
+  .jp-card {
+    background-color: #F0F0F0;
+    border: 1px solid #E0E0E0;
+    border-radius: 1rem;
+  }
+  .jp-card-header {
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  .jp-muted {
+    color: #6B6B6B;
+  }
+  .jp-text {
+    color: #1A1A1A;
   }
 }

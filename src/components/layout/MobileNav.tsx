@@ -22,7 +22,10 @@ export function MobileNav() {
   const pathname = usePathname()
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 z-50 safe-area-inset-bottom">
+    <nav
+      className="md:hidden fixed bottom-0 left-0 right-0 border-t z-50"
+      style={{ backgroundColor: '#FAFAFA', borderColor: '#E0E0E0' }}
+    >
       <div className="flex">
         {navigatie.map(({ href, label, icon: Icon }) => {
           const actief = pathname === href || pathname.startsWith(href + '/')
@@ -30,12 +33,11 @@ export function MobileNav() {
             <Link
               key={href}
               href={href}
-              className={`flex flex-col items-center justify-center flex-1 min-h-[56px] gap-1 text-xs transition-colors duration-150 cursor-pointer ${
-                actief ? 'text-slate-900' : 'text-slate-400 hover:text-slate-600'
-              }`}
+              className="flex flex-col items-center justify-center flex-1 min-h-[56px] gap-1 text-xs transition-colors duration-150 cursor-pointer"
+              style={{ color: actief ? '#C8102E' : '#6B6B6B' }}
             >
-              <Icon className={`w-5 h-5 transition-colors duration-150 ${actief ? 'text-slate-900' : 'text-slate-400'}`} />
-              <span className={`${actief ? 'font-medium' : ''}`}>{label}</span>
+              <Icon className="w-5 h-5" style={{ color: actief ? '#C8102E' : '#6B6B6B' }} />
+              <span style={{ fontWeight: actief ? 600 : 400 }}>{label}</span>
             </Link>
           )
         })}

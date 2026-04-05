@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl" className={inter.variable}>
-      <body className="font-sans bg-slate-50 antialiased">
+      <body className="font-sans antialiased" style={{ backgroundColor: '#FAFAFA', color: '#1A1A1A' }}>
         <div className="flex min-h-screen">
           <Sidebar />
           <main className="flex-1 pb-20 md:pb-8 min-w-0">
